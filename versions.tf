@@ -13,7 +13,7 @@ terraform {
   required_version = ">= 0.15"
 
   backend "remote" {
-    organization = "<apatil>"
+    organization = "apatil"
 
     workspaces {
       name = "sentinel-demo"
