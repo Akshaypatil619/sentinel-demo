@@ -23,6 +23,16 @@ resource "aws_instance" "ubuntu" {
   instance_type          = var.instance_type
 
   tags = {
-    Name = var.instance_name
+    Namesss = var.instance_name
   }
 }
+
+resource "aws_instance" "ubuntu2" {
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          =  c5.large
+
+  tags = {
+    Name = "pimco-test-instance"
+  }
+}
+
